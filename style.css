@@ -1,35 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 body {
   font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
   background-color: #1c1c2b;
-  color: #fff;
-  text-align: center;
-  padding-top: 50px;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px;
 }
 
 .container {
-  background: #29293d;
-  padding: 30px;
+  background-color: #29293d;
+  padding: 30px 20px;
   border-radius: 15px;
-  width: 300px;
-  margin: auto;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
 }
 
 #display {
   font-size: 48px;
-  margin: 20px 0;
+  margin-bottom: 20px;
+}
+
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
 .buttons button {
-  margin: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
   background-color: #00adb5;
   color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
-  transition: 0.2s ease;
+  transition: background 0.3s ease;
+  min-width: 45%;
 }
 
 .buttons button:hover {
@@ -40,38 +62,31 @@ body {
   list-style: none;
   padding: 0;
   margin-top: 20px;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 #laps li {
   background-color: #3a3a50;
+  margin: 6px 0;
   padding: 8px;
-  margin: 4px 0;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
 
 
 @media screen and (max-width: 480px) {
-  .container {
-    width: 90%;
-    padding: 20px;
-  }
-
   #display {
     font-size: 36px;
   }
 
-  .buttons button {
-    width: 100%;
-    margin: 6px 0;
-    font-size: 14px;
-  }
-
   h1 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
-  #laps li {
+  .buttons button {
+    min-width: 100%;
     font-size: 14px;
   }
 }
